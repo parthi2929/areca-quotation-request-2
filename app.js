@@ -27,8 +27,8 @@ app.get("/",
     }
 );
 
-//5. Decide the port
-var port = process.env.PORT || 8080;
+//5. Decide the port - let it be 8080
+var port = process.env.PORT || 8080; 
 
 //6. Start the server of express object to listen to port
 var server = app.listen(port,
