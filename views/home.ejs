@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head> 
+
+  <!--<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />-->
+  <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" />
+</head>
+<body>
+
+  <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+                  <div id="surveyContainer"></div>
+          </div>
+        </div>
+  </div>
+
+  <br/>
+
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<script src="/js/jquery-1.11.3.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="https://surveyjs.azureedge.net/0.12.34/survey.jquery.min.js"></script>
+<script>
+$( document ).ready(function() 
+  {
+    console.log( 'ready!' );
+    Survey.Survey.cssType = "bootstrap";
+
+    var surveyJSON = { surveyId: '2d2a71f8-6d71-4bd5-9285-7f18f7cf973e'}
+
+    function sendDataToServer(survey) 
+    {
+        survey.sendResult('8796813c-0748-42da-b12c-cc8a9ab4cad4');
+    }
+
+    var survey = new Survey.Model(surveyJSON);
+    $("#surveyContainer").Survey(
+      {
+        model: survey,
+        onComplete: sendDataToServer
+      }
+    );
+  });
+</script>
+</body>
+</html>
