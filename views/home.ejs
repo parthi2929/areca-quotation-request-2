@@ -9,10 +9,12 @@
 
   <div class="container">
        <div class="row">
+         
           <div class="col-lg-8 well col-lg-offset-2">
                   <div id="surveyContainer"></div>
           </div>
         </div>
+
   </div>
 
   <br/>
@@ -22,6 +24,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 <script src="/js/jquery-1.11.3.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+
 <script src="https://surveyjs.azureedge.net/0.12.34/survey.jquery.min.js"></script>
 <script>
 $( document ).ready(function() 
@@ -29,11 +32,11 @@ $( document ).ready(function()
     console.log( 'ready!' );
     Survey.Survey.cssType = "bootstrap";
 
-    var surveyJSON = { surveyId: '2d2a71f8-6d71-4bd5-9285-7f18f7cf973e'}
+    var surveyJSON = { surveyId: 'ff5dddf2-c919-4f29-ae29-ca26156c2dff'}
 
     function sendDataToServer(survey) 
     {
-        survey.sendResult('8796813c-0748-42da-b12c-cc8a9ab4cad4');
+        survey.sendResult('77be43f2-0d4d-4274-b48f-7ba26f223a77');
     }
 
     var survey = new Survey.Model(surveyJSON);
